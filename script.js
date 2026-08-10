@@ -19,7 +19,9 @@ packageCards.forEach((card) => {
 
     packageCards.forEach((item) => {
       item.classList.remove('is-active');
+
       const itemTrigger = item.querySelector('.package-card-trigger');
+
       if (itemTrigger) {
         itemTrigger.setAttribute('aria-expanded', 'false');
       }
@@ -32,9 +34,7 @@ packageCards.forEach((card) => {
   });
 });
 
-const endpoint = form.id === 'trip-form'
-  ? '/.netlify/functions/send-enquiry'
-  : '/api/contact';
+const tripForm = document.getElementById('trip-form');
 const contactForm = document.getElementById('contact-form');
 
 const submitForm = async (event) => {
@@ -42,7 +42,13 @@ const submitForm = async (event) => {
 
   const form = event.target;
   const button = form.querySelector('button');
-  const feedback = form.querySelector('.form-message');
+
+  // The trip form's message is outside the <form>,
+  // while the contact form's message is inside it.
+  const feedback =
+    form.querySelector('.form-message') ||
+    document.getElementById('form-message');
+
   const originalText = button?.textContent || 'Submit';
 
   if (button) {
@@ -51,26 +57,33 @@ const submitForm = async (event) => {
   }
 
   try {
-    const endpoint = form.id === 'trip-form'
-      ? '/.netlify/functions/send-enquiry'
-      : '/api/contact';
-
     const payload = Object.fromEntries(
       new FormData(form).entries()
     );
 
-    const response = await fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    });
+    // Tell the Netlify Function which form was submitted.
+    payload.formType =
+      form.id === 'trip-form'
+        ? 'enquiry'
+        : 'contact';
+
+    const response = await fetch(
+      '/.netlify/functions/send-email',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      }
+    );
 
     const data = await response.json();
 
-    if (!response.ok) {
-      throw new Error(data.message || 'Something went wrong.');
+    if (!response.ok || !data.success) {
+      throw new Error(
+        data.message || 'Something went wrong.'
+      );
     }
 
     if (feedback) {
@@ -79,7 +92,7 @@ const submitForm = async (event) => {
         'Thank you! We will reach out shortly.';
     }
 
-    // Only clear the form after successful submission
+    // Only reset the form after successful submission.
     form.reset();
 
   } catch (error) {
@@ -100,5 +113,3 @@ const submitForm = async (event) => {
 
 tripForm?.addEventListener('submit', submitForm);
 contactForm?.addEventListener('submit', submitForm);
-
-
