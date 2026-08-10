@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Choice Trips | Curated Travel Experiences</title>
+    <meta
+      name="description"
+      content="Your Choice Trips offers curated domestic and international holiday packages with comfortable planning, trusted support, and unforgettable journeys."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-shell">
+        <a class="brand" href="#home">
+          <span class="brand-mark" aria-label="Your Choice Trips logo" role="img">
+            <img src="brand-logo.svg" alt="Your Choice Trips logo" />
+          </span>
+          <span>
+            <strong>Your Choice Trips</strong>
+            <small>Trusted Travel Agency</small>
+          </span>
+        </a>
+        <button class="menu-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav">
+          <a href="#destinations">Destinations</a>
+          <a href="#experiences">Explore</a>
+          <a href="#packages">Packages</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn-primary" href="#contact">Plan My Trip</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">Modern travel, personal care, seamless planning</p>
+            <h1>Your next journey starts with comfort and confidence.</h1>
+            <p class="lead">
+              Discover spiritual circuits, family holidays, adventure escapes, and
+              international getaways curated with care.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#packages">Explore Packages</a>
+              <a class="btn btn-secondary" href="#contact">Enquire Now</a>
+            </div>
+            <ul class="hero-features">
+              <li>Flexible itineraries</li>
+              <li>Trusted local support</li>
+              <li>Hassle-free bookings</li>
+            </ul>
+          </div>
+          <div class="hero-card" aria-label="Trip enquiry form">
+            <h2>Plan your holiday</h2>
+            <form id="trip-form">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Enter your name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="Enter your email" required />
+              </label>
+              <label>
+                Destination
+                <select name="destination">
+                  <option>Varanasi & Prayagraj</option>
+                  <option>Ayodhya</option>
+                  <option>Rajasthan</option>
+                  <option>Dubai</option>
+                  <option>Bhutan</option>
+                </select>
+              </label>
+              <label>
+                Travel date
+                <input type="date" name="date" />
+              </label>
+              <button class="btn btn-primary btn-full" type="submit">Start Planning</button>
+            </form>
+            <p id="form-message" class="form-message" role="status"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="container stats-grid">
+          <div>
+            <strong>250+</strong>
+            <span>Happy travellers</span>
+          </div>
+          <div>
+            <strong>40+</strong>
+            <span>Destinations covered</span>
+          </div>
+          <div>
+            <strong>15+</strong>
+            <span>Years of service</span>
+          </div>
+          <div>
+            <strong>4.9/5</strong>
+            <span>Average feedback</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="destinations">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Trending destinations</p>
+            <h2>Choose from sacred cities, serene escapes, and iconic getaways.</h2>
+          </div>
+
+          <div class="destination-list">
+            <div class="destination-column package-card">
+              <h3>Favourite Cities</h3>
+              <ul>
+                <li><a href="#contact">Varanasi &amp; Sarnath</a></li>
+                <li><a href="#contact">Gaya / Bodhgaya</a></li>
+                <li><a href="#contact">Prayagraj</a></li>
+                <li><a href="#contact">Ayodhya</a></li>
+                <li><a href="#contact">Lucknow</a></li>
+                <li><a href="#contact">Chitrakoot</a></li>
+                <li><a href="#contact">Kapilvastu</a></li>
+                <li><a href="#contact">Shrawasti</a></li>
+              </ul>
+            </div>
+
+            <div class="destination-column package-card">
+              <h3>UP Tourism Circuits</h3>
+              <ul>
+                <li><a href="#contact">Adhyatmik Circuit</a></li>
+                <li><a href="#contact">Buddhist Circuit</a></li>
+                <li><a href="#contact">Kashi Prayagraj Circuit</a></li>
+                <li><a href="#contact">Pind Daan Yatra Packages</a></li>
+                <li><a href="#contact">UP Wildlife Circuit</a></li>
+                <li><a href="#contact">Ramayana Circuit</a></li>
+                <li><a href="#contact">Krishna Braj Circuit</a></li>
+              </ul>
+            </div>
+
+            <div class="destination-column package-card">
+              <h3>Asian Tours</h3>
+              <ul>
+                <li><a href="#contact">Sri Lanka Tours</a></li>
+                <li><a href="#contact">Thailand Tours</a></li>
+                <li><a href="#contact">Vietnam Tours</a></li>
+              </ul>
+            </div>
+
+            <div class="destination-column package-card">
+              <h3>Domestic Circuits</h3>
+              <ul>
+                <li><a href="#contact">Rajasthan Tourism</a></li>
+                <li><a href="#contact">Uttarakhand Tourism</a></li>
+                <li><a href="#contact">Jharkhand Tourism</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt explore-section" id="experiences">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Explore more</p>
+            <h2>Culture, festivals, and heritage experiences for curious travellers.</h2>
+          </div>
+
+          <div class="experience-list">
+            <div class="experience-column package-card">
+              <h3>Arts &amp; Culture</h3>
+              <ul>
+                <li><a href="#contact">Culture of Uttar Pradesh</a></li>
+                <li><a href="#contact">Music and Dance of Uttar Pradesh</a></li>
+              </ul>
+            </div>
+
+            <div class="experience-column package-card">
+              <h3>Festivals</h3>
+              <ul>
+                <li><a href="#contact">Kumbh Mela</a></li>
+                <li><a href="#contact">Holi</a></li>
+                <li><a href="#contact">Dev Diwali</a></li>
+              </ul>
+            </div>
+
+            <div class="experience-column package-card">
+              <h3>Heritage</h3>
+              <ul>
+                <li><a href="#contact">Taj Mahal — History, Facts, Timings and Complete Travel Guide</a></li>
+                <li><a href="#contact">Agra Fort: The Red Sandstone City That Ruled an Empire</a></li>
+              </ul>
+            </div>
+
+            <div class="experience-column package-card">
+              <h3>Heritage Walks</h3>
+              <ul>
+                <li><a href="#contact">Step into the Mughal Era</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="packages">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Featured tour packages</p>
+            <h2>Travel styles for families, couples, and groups.</h2>
+          </div>
+
+          <div class="package-carousel-wrapper">
+            <div class="package-carousel" id="package-carousel">
+              <article class="package-card package-group is-active">
+                <button class="package-card-trigger" type="button" aria-expanded="true">
+                  <span>Varanasi Packages</span>
+                </button>
+                <ul class="package-list">
+                  <li>
+                    <div>
+                      <strong>Kashi – Ayodhya</strong>
+                      <small>3 Nights / 4 Days</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Explore the Spiritual Heart of India – Varanasi</strong>
+                      <small>2 Nights / 3 Days</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Kashi – Prayagraj Spiritual Circuit</strong>
+                      <small>2 Nights / 3 Days</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Kashi – Prayagraj – Ayodhya Spiritual Tour</strong>
+                      <small>3 Nights / 4 Days</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Varanasi – Prayagraj Spiritual Tour</strong>
+                      <small>2 Nights / 3 Days</small>
+                    </div>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="package-card package-group">
+                <button class="package-card-trigger" type="button" aria-expanded="false">
+                  <span>Asia Tour Packages</span>
+                </button>
+                <ul class="package-list">
+                  <li>
+                    <div>
+                      <strong>Romantic Sri Lanka Getaway – Bentota &amp; Nuwara Eliya</strong>
+                      <small>4 Nights / 5 Days</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Tropical Thailand Escape – Phuket &amp; Krabi</strong>
+                      <small>5 Nights / 6 Days</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Vietnam Tour</strong>
+                      <small>6 Nights / 7 Days</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Classic Vietnam Tour – Hanoi, Halong Bay &amp; Ho Chi Minh City</strong>
+                      <small>5 Nights / 6 Days</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Scenic North Vietnam – Hanoi, Sapa &amp; Halong Bay</strong>
+                      <small>6 Nights / 7 Days</small>
+                    </div>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="package-card package-group">
+                <button class="package-card-trigger" type="button" aria-expanded="false">
+                  <span>Domestic Packages</span>
+                </button>
+                <ul class="package-list">
+                  <li>
+                    <div>
+                      <strong>Rajasthan Tour</strong>
+                      <small>6 Nights / 7 Days</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Royal Rajasthan Heritage Tour – Jaipur, Jodhpur &amp; Udaipur</strong>
+                      <small>6 Nights / 7 Days</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Romantic Rajasthan – Udaipur &amp; Mount Abu</strong>
+                      <small>4 Nights / 5 Days</small>
+                    </div>
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow">Why choose us</p>
+            <h2>Your Choice Trips is built around trust, comfort, and thoughtful planning.</h2>
+            <p>
+              We help travellers design journeys that feel easy from the first conversation to the final destination. From pilgrimage routes to international holidays, every itinerary is shaped around your time, budget, and travel style.
+            </p>
+            <div class="feature-list">
+              <div>
+                <strong>Professional guidance</strong>
+                <p>Transparent packages and real support at every stage.</p>
+              </div>
+              <div>
+                <strong>Flexible customization</strong>
+                <p>Tailor your trip for families, couples, or group travel.</p>
+              </div>
+              <div>
+                <strong>Reliable execution</strong>
+                <p>Well-managed transfers, accommodations, and on-trip assistance.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-card">
+            <h3>Travel with peace of mind</h3>
+            <p>Enjoy a smooth experience with local experts, curated options, and responsive service.</p>
+            <a class="btn btn-primary" href="#contact">Talk to an expert</a>
+            <a class="text-link" href="https://g.page/r/CQm6h8GnL0hZEBM/review" target="_blank" rel="noreferrer">Google reviews</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Traveler stories</p>
+            <h2>Real journeys, warm memories, and happy families.</h2>
+          </div>
+          <div class="card-grid testimonials-grid">
+            <article class="testimonial-card">
+              <p>“Everything was perfectly planned. We enjoyed a smooth and beautiful trip from start to finish.”</p>
+              <strong>— Priya & Family</strong>
+            </article>
+            <article class="testimonial-card">
+              <p>“The team understood our needs and delivered a stress-free itinerary with great care.”</p>
+              <strong>— Aman S.</strong>
+            </article>
+            <article class="testimonial-card">
+              <p>“We loved the local support and thoughtful details. It made our holiday feel effortless.”</p>
+              <strong>— Neha R.</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">Let’s create your next trip</p>
+            <h2>Tell us where you want to go and we will help you plan it.</h2>
+            <p>From sacred circuits to international escapes, we are ready to tailor an itinerary that fits your journey.</p>
+            <ul class="contact-list">
+              <li>📍 Varanasi, Uttar Pradesh</li>
+              <li>📞 +91 83183 41685</li>
+              <li>✉️ yourchoicetrips@gmail.com</li>
+            </ul>
+          </div>
+          <div class="contact-card">
+            <h3>Request a callback</h3>
+            <form id="contact-form">
+              <label>
+                Your name
+                <input type="text" name="contactName" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="contactEmail" required />
+              </label>
+              <label>
+                Destination interest
+                <input type="text" name="interest" placeholder="Eg. Ayodhya, Dubai, Rajasthan" />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="4" placeholder="Tell us about your travel plans"></textarea>
+              </label>
+              <button class="btn btn-primary btn-full" type="submit">Send request</button>
+              <p class="form-message" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-shell">
+        <p>© 2026 Your Choice Trips. All rights reserved.</p>
+        <div>
+          <a href="#home">Home</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
