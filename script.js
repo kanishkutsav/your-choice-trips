@@ -20,6 +20,24 @@ if (menuToggle && siteNav) {
 }
 
 const packageCards = document.querySelectorAll('.package-card');
+const mobilePackageView = window.matchMedia('(max-width: 640px)');
+
+const syncPackageView = () => {
+  if (!packageCards.length) return;
+
+  if (mobilePackageView.matches) {
+    packageCards.forEach((card) => {
+      const trigger = card.querySelector('.package-card-trigger');
+      if (!trigger) return;
+
+      card.classList.add('is-active');
+      trigger.setAttribute('aria-expanded', 'true');
+    });
+  }
+};
+
+syncPackageView();
+mobilePackageView.addEventListener?.('change', syncPackageView);
 
 packageCards.forEach((card) => {
   const trigger = card.querySelector('.package-card-trigger');
@@ -27,6 +45,8 @@ packageCards.forEach((card) => {
   if (!trigger) return;
 
   trigger.addEventListener('click', () => {
+    if (mobilePackageView.matches) return;
+
     const isOpen = card.classList.contains('is-active');
 
     packageCards.forEach((item) => {
