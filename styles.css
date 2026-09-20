@@ -1609,3 +1609,51 @@ body {
     grid-auto-columns: 94%;
   }
 }
+
+
+/* Mobile package cards: show every package vertically, fully expanded */
+@media (max-width: 640px) {
+  .package-carousel {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 0.15rem 0 0.5rem;
+    scroll-snap-type: none;
+  }
+
+  .package-group {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    align-self: stretch;
+    scroll-snap-align: none;
+  }
+
+  .package-card-trigger {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .package-card-trigger::after {
+    content: '−';
+  }
+
+  .package-list,
+  .package-card.is-active .package-list {
+    display: grid;
+  }
+
+  .package-list {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .package-list li:last-child {
+    padding-bottom: 0;
+  }
+}
