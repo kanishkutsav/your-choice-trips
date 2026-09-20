@@ -1738,3 +1738,25 @@ body {
     line-height: 1.35;
   }
 }
+
+
+/* Keep hero service tagline clear of the enquiry card */
+@media (min-width: 981px) {
+  .hero {
+    padding-bottom: 6.5rem;
+  }
+
+  .hero-content {
+    padding-bottom: 8rem;
+  }
+
+  .hero-tagline {
+    bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 981px) and (max-height: 820px) {
+  .hero {
+    min-height: 760px;
+  }
+}
