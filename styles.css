@@ -1177,3 +1177,435 @@ textarea:focus {
     margin-right: 1rem;
   }
 }
+
+
+/* Mobile-first refinements */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.hero,
+.section,
+.stats,
+.footer,
+.topbar {
+  width: 100%;
+}
+
+@media (max-width: 980px) {
+  .topbar {
+    position: sticky;
+  }
+
+  .nav-shell {
+    position: relative;
+  }
+
+  .hero-content {
+    gap: 2.25rem;
+  }
+
+  .hero-copy,
+  .hero-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-card {
+    margin-inline: auto;
+  }
+
+  .destination-list,
+  .experience-list {
+    align-items: stretch;
+  }
+
+  .destination-column.package-card,
+  .experience-column.package-card {
+    height: 100%;
+  }
+
+  .package-carousel {
+    width: 100%;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 28px);
+    max-width: none;
+  }
+
+  .nav-shell {
+    min-height: 68px;
+    gap: 0.65rem;
+  }
+
+  .brand {
+    gap: 0.55rem;
+    max-width: calc(100% - 56px);
+  }
+
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+
+  .brand strong {
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+
+  .brand small {
+    font-size: 0.66rem;
+    white-space: nowrap;
+  }
+
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+    padding: 0.45rem;
+    flex: 0 0 44px;
+  }
+
+  .site-nav {
+    left: 14px;
+    right: 14px;
+    top: calc(100% + 8px);
+    padding: 0.55rem;
+    max-height: calc(100vh - 86px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-nav > a:not(.btn) {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .site-nav .btn {
+    min-height: 48px;
+  }
+
+  .hero {
+    min-height: 0;
+    background-position: 62% center;
+  }
+
+  .hero-content {
+    padding: 3.4rem 0 3.8rem;
+    gap: 1.7rem;
+  }
+
+  .eyebrow {
+    gap: 0.4rem;
+    margin-bottom: 0.65rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.12rem;
+    line-height: 1.4;
+  }
+
+  .eyebrow::before {
+    width: 20px;
+    flex: 0 0 20px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    margin-bottom: 0.9rem;
+    font-size: clamp(2.25rem, 11.5vw, 3.35rem);
+    line-height: 1.02;
+  }
+
+  .lead {
+    max-width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 0.65rem;
+    margin: 1.35rem 0 1.1rem;
+  }
+
+  .hero-actions .btn {
+    min-height: 50px;
+  }
+
+  .hero-features {
+    gap: 0.5rem;
+    font-size: 0.88rem;
+  }
+
+  .hero-features li {
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-card {
+    padding: 1.15rem;
+    border-radius: 18px;
+  }
+
+  .hero-card h2,
+  .contact-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .hero-card form,
+  .contact-card form {
+    gap: 0.72rem;
+  }
+
+  label {
+    font-size: 0.82rem;
+  }
+
+  input,
+  select,
+  textarea {
+    min-height: 46px;
+    padding: 0.75rem 0.8rem;
+    font-size: 16px; /* prevents iOS Safari zoom */
+    border-radius: 10px;
+  }
+
+  textarea {
+    min-height: 110px;
+  }
+
+  .stats {
+    margin-top: -18px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 0.45rem;
+    border-radius: 16px;
+  }
+
+  .stats-grid div {
+    min-width: 0;
+    padding: 0.72rem 0.4rem;
+  }
+
+  .stats-grid div:nth-child(odd)::after {
+    right: -1px;
+  }
+
+  .stats-grid strong {
+    font-size: 1.12rem;
+  }
+
+  .stats-grid span {
+    display: block;
+    font-size: 0.72rem;
+    line-height: 1.25;
+  }
+
+  .section {
+    padding: 3.6rem 0;
+  }
+
+  .section-heading {
+    margin-bottom: 1.35rem;
+  }
+
+  .section-heading h2,
+  .about-section h2,
+  .contact-section h2 {
+    font-size: clamp(1.85rem, 8.7vw, 2.55rem);
+    line-height: 1.08;
+  }
+
+  .destination-list,
+  .experience-list {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .destination-column.package-card,
+  .experience-column.package-card {
+    min-height: 0;
+    padding: 1.15rem;
+    border-radius: 15px;
+  }
+
+  .destination-column.package-card h3,
+  .experience-column.package-card h3 {
+    font-size: 1.18rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .destination-column.package-card a,
+  .experience-column.package-card a {
+    padding: 0.38rem 0;
+    font-size: 0.94rem;
+  }
+
+  .package-carousel {
+    grid-auto-columns: 90%;
+    gap: 0.8rem;
+    padding: 0.15rem 0.05rem 0.75rem;
+    scroll-snap-type: x proximity;
+  }
+
+  .package-group {
+    min-height: 0;
+    padding: 1.05rem;
+    border-radius: 15px;
+    scroll-snap-align: start;
+  }
+
+  .package-card-trigger {
+    min-height: 42px;
+  }
+
+  .package-card-trigger span {
+    padding-right: 0.7rem;
+    font-size: 1.08rem;
+  }
+
+  .package-card-trigger::after {
+    width: 28px;
+    height: 28px;
+  }
+
+  .package-list {
+    margin-top: 0.9rem;
+    padding-top: 0.85rem;
+    gap: 0.7rem;
+  }
+
+  .package-list li {
+    padding-bottom: 0.65rem;
+  }
+
+  .package-list strong {
+    font-size: 0.92rem;
+  }
+
+  .package-list small {
+    font-size: 0.8rem;
+  }
+
+  .about-grid,
+  .contact-grid {
+    gap: 1.5rem;
+  }
+
+  .about-section > .container > div:first-child > p:not(.eyebrow),
+  .contact-section > .container > div:first-child > p:not(.eyebrow) {
+    font-size: 0.96rem;
+  }
+
+  .feature-list {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-card,
+  .contact-card {
+    padding: 1.2rem;
+    border-radius: 17px;
+  }
+
+  .about-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-card .btn {
+    width: 100%;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .testimonial-card {
+    min-height: 0;
+    padding: 1.25rem;
+  }
+
+  .testimonial-card p {
+    font-size: 0.94rem;
+  }
+
+  .contact-list {
+    gap: 0.55rem;
+    margin-top: 1.15rem;
+  }
+
+  .contact-list li {
+    padding: 0.75rem 0.8rem;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+  }
+
+  .footer {
+    padding: 1.6rem 0;
+  }
+
+  .footer-shell {
+    gap: 0.8rem;
+  }
+
+  .footer p {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .footer a {
+    display: inline-block;
+    margin: 0 0.8rem 0 0;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 22px);
+  }
+
+  .brand strong {
+    font-size: 0.86rem;
+  }
+
+  .brand small {
+    font-size: 0.61rem;
+  }
+
+  .hero-content {
+    padding-top: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.15rem;
+  }
+
+  .hero-features {
+    font-size: 0.82rem;
+  }
+
+  .stats-grid strong {
+    font-size: 1rem;
+  }
+
+  .stats-grid span {
+    font-size: 0.67rem;
+  }
+
+  .package-carousel {
+    grid-auto-columns: 94%;
+  }
+}
